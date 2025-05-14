@@ -1,0 +1,14 @@
+[project]
+name = "aiornot_small_image"
+version = "0.1.0"
+description = "Repository contains models and sample for inferencing models on small images."
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "onnx>=1.17.0",
+    "onnxruntime-gpu>=1.20.1",
+    "triton==3.2.0",
+    "tritonclient==2.56.0",
+    "opencv-python-headless==4.11.0.86",
+	"grpcio==1.67.1",
+]
