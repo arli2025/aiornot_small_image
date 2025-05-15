@@ -1,0 +1,4 @@
+[core]
+    remote = aion
+['remote "aion"']
+    url = s3://aiornot-models/dvc-store
