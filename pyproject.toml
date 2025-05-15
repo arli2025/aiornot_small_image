@@ -10,5 +10,6 @@ dependencies = [
     "triton==3.2.0",
     "tritonclient==2.56.0",
     "opencv-python-headless==4.11.0.86",
-	"grpcio==1.67.1",
+    "grpcio==1.67.1",
+    "dvc[s3]"
 ]
