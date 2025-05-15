@@ -1,5 +1,10 @@
 Repository contains models and sample for inferencing models on small images. 
 
+Models are stored in dvc, first do 
+```
+dvc pull
+```
+
 How to start serving with triton server
 ```
 sudo docker run --rm --gpus=1 -p8000:8000 -p8001:8001 -p8002:8002 -v${pwd}:/models/ nvcr.io/nvidia/tritonserver:25.02-py3 tritonserver --model-repository=/models
