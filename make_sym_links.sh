@@ -7,3 +7,7 @@ cd ../../
 cd rine_vit/1/
 ln -s rine_vit_large_last.onnx model.onnx
 cd ../../
+
+mkdir models
+mv resnet models
+mv rine_vit models

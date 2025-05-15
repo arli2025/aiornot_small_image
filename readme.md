@@ -8,7 +8,7 @@ dvc pull
 How to start serving with triton server
 ```
 bash make_sym_links.sh
-sudo docker run --rm --gpus=1 -p8000:8000 -p8001:8001 -p8002:8002 -v$./:/models/ nvcr.io/nvidia/tritonserver:25.02-py3 tritonserver --model-repository=/models
+sudo docker run --rm --gpus=1 -p8000:8000 -p8001:8001 -p8002:8002 -v"$(pwd)"/models/:/models/ nvcr.io/nvidia/tritonserver:25.02-py3 tritonserver --model-repository=/models
 ```
 
 rine_vit is taken from here https://github.com/mever-team/rine
