@@ -16,7 +16,7 @@ Both models were trained on same data
 
 inference example
 ```
-python inference_triton.py 1cf0ea0f8d067336cd5961bc5fa7b685dec433799d8eb08258f052ebfc1f5107.jpg - generated with gpt4o
+python inference_triton.py 1cf0ea0f8d067336cd5961bc5fa7b685dec433799d8eb08258f052ebfc1f5107.jpg 
 ```
 
 hors2 server with A10G gives ~34 it/s or ~3 ms 
