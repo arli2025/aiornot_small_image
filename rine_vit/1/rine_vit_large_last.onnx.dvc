@@ -1,0 +1,5 @@
+outs:
+- md5: 2888fcfc778756195a7599a06e58f235
+  size: 1222267850
+  hash: md5
+  path: rine_vit_large_last.onnx
