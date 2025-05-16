@@ -21,5 +21,6 @@ python inference_triton.py 1cf0ea0f8d067336cd5961bc5fa7b685dec433799d8eb08258f05
 ```
 
 hors2 server with A10G gives ~34 it/s or ~30 ms 
+trt fp16 gives ~50 it/s or ~20 ms 
 
 precision_recall_curve.html contains several curves, including resnet and ensembled variant comparing with baseline.
