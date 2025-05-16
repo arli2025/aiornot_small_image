@@ -2,6 +2,7 @@ name: "resnet"
 
 platform: "onnxruntime_onnx"
 
+#max_batch_size : 0
 max_batch_size : 16
 dynamic_batching {
     max_queue_delay_microseconds: 4000
@@ -20,17 +21,17 @@ output [
     name: "probas_bin"
     data_type: TYPE_FP32
     dims: [ 2 ],
-  },
-  {
-    name: "probas_multi"
-    data_type: TYPE_FP32
-    dims: [ 8 ],
   }
+#  {
+#    name: "probas_multi"
+#    data_type: TYPE_FP32
+#    dims: [ 8 ],
+#  }
 ]
 
-#optimization { execution_accelerators {
-#  gpu_execution_accelerator : [ {
-#    name : "tensorrt"
-#    parameters { key: "precision_mode" value: "FP16" }}
-#  ]
-#}}
+optimization { execution_accelerators {
+  gpu_execution_accelerator : [ {
+    name : "tensorrt"
+    parameters { key: "precision_mode" value: "FP16" }}
+  ]
+}}
