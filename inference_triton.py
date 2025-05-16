@@ -17,7 +17,7 @@ def pad_img(image, size: int):
     dw = (size-w)//2
     dh = (size-h)//2
     image = cv2.copyMakeBorder(image, dh, dh+h %
-                             2, dw, dw+w % 2, borderType=cv2.BORDER_REFLECT)
+                               2, dw, dw+w % 2, borderType=cv2.BORDER_REFLECT)
     return image.transpose((2, 0, 1))[np.newaxis]
 
 
@@ -60,11 +60,10 @@ def process_ensemble(rgb_image: np.array):  # assuming images are around 128x128
         probs_bin = req.as_numpy('probas_bin')[:, 1]
         if probs_bin.shape[0] == 2:
             probas.append((probs_bin[0]+probs_bin[1])/2.0)
-            probas_multi = req.as_numpy('probas_multi')
         else:
             probas.append(probs_bin[0])
 
-    return (probas[0]+probas[1])/2.0, np.median(probas_multi, axis=0)
+    return (probas[0]+probas[1])/2.0
 
 
 def read_img(img_path):
