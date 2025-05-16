@@ -44,8 +44,7 @@ def process_ensemble(rgb_image: np.array):  # assuming images are around 128x128
     img = pad_img(rgb_image, 256)
     img2 = np.flip(img, axis=3)
     resnet_batch = np.concatenate([img, img2], axis=0)
-    outputs = [tritongrpcclient.InferRequestedOutput('probas_bin'),
-               tritongrpcclient.InferRequestedOutput('probas_multi')]
+    outputs = [tritongrpcclient.InferRequestedOutput('probas_bin')]
     inputs = [tritongrpcclient.InferInput('input', (2, 3, 256, 256), "UINT8")]
     inputs[0].set_data_from_numpy(resnet_batch)
     req = triton_client.async_infer(
